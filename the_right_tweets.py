@@ -1,4 +1,4 @@
-import twitter, os
+import twitter, os, nltk
 
 twitter_api = twitter.Api(consumer_key=os.getenv('CONSUMER_KEY'), 
                   consumer_secret=os.getenv('CONSUMER_SECRET'),
