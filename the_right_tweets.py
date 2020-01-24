@@ -5,6 +5,9 @@ twitter_api = twitter.Api(consumer_key=os.getenv('CONSUMER_KEY'),
                   access_token_key=os.getenv('ACCESS_TOKEN'),
                   access_token_secret=os.getenv('ACCESS_TOKEN_SECRET'))
 
-puppy_results = twitter_api.GetSearch(term='puppies', count=1)
-puppy_tweet = puppy_results[0]
-print(puppy_tweet.text)
+puppy_tweets = twitter_api.GetSearch(term='puppies')
+
+def get_tweet_sentiment(self, tweet): 
+    return TextBlob(tweet.text) 
+    
+#print(puppy_tweet.text)
